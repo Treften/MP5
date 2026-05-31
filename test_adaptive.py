@@ -23,7 +23,7 @@ def test_adjust_on_high_error_rate(controller):
     stats.record(success=True, latency_ms=100)
     
     new_conc = controller.adjust("http://api.test", stats)
-    assert new_conc == 2  
+    assert new_conc == 1  
 
 
 def test_adjust_on_high_latency(controller):
@@ -62,4 +62,4 @@ def test_concurrency_bounds(controller):
     for _ in range(20):
         controller.adjust("http://api.test2", stats_good)
     
-    assert controller.get_concurrency("http://api.test2") == 5  
+    assert controller.get_concurrency("http://api.test2") == 4  

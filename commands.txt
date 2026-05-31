@@ -4,8 +4,8 @@
 2. python main.py serve --host 0.0.0.0 --port 8000
 После запуска сервера в отдельном терминале запустить тест
 3. python main.py test --scenario all --repeats 10 --output report/
-
+Запуск отдельного сценария
 python main.py test --scenario c --repeats 20 --output report/
-
+Запуск модульных тестов
 pytest test_adaptive.py -v --asyncio-mode=auto
 
